@@ -1,18 +1,15 @@
-import java.util.Collection;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Proj01Runner {
 
-    int[] vals;
-    Collection ref = new TreeSet<Integer>();
+    Collection inVals = new ArrayList();
 
-    public Proj01Runner(int[] vals){
-        this.vals = vals;
-        
-        for(int i = 0; i < vals.length; i++){
-            ref.add(vals[i]);
+
+    public Proj01Runner(int[] intList) {
+        for(int i = 0; i < intList.length; i++) {
+            inVals.add(intList[i]);
         }//end for loop
-
+        
         System.out.println("I certify that this program is my own work\n" +
                             "and is not the work of others. I agree not\n" +
                             "to share my solution with others.\n" +
@@ -20,13 +17,15 @@ public class Proj01Runner {
     }//end Constructor
 
     public Collection runA(){
-        return ref;
+        
+        return inVals;
     }//end runA method
 
     public Collection runB(){
-        return ref;
+        Collection collectionB = new TreeSet(inVals);
+        
+        return collectionB;
     }//end runB method
     
-
     
 }//end Proj01Runner class
