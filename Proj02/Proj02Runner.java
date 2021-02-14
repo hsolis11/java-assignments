@@ -18,7 +18,7 @@ class Proj02Runner{
       "I certify that this program is my own work \n"+
       "and is not the work of others. I agree not \n" +
       "to share my solution with others.\n" +
-      "Replace this line with your name\n");
+      "Hector Solis\n");
   }//end overloaded constructor
   
   Proj02Runner(int data){//overloaded constructor
@@ -26,6 +26,10 @@ class Proj02Runner{
     // the incoming data value
     this.data = data;
   }//end overloaded constructor
+
+  public String toString(){
+    return "" + data;
+  }
 
 }//end class Proj02Runner
 
