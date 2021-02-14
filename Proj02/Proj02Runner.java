@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
-class Proj02Runner{
+class Proj02Runner implements Comparable{
 
   int data = 0;
 
@@ -29,6 +29,19 @@ class Proj02Runner{
 
   public String toString(){
     return "" + data;
+  }
+
+  public int compareTo(Object o){
+    if(!(o instanceof Proj02Runner)){
+      throw new ClassCastException();
+    }
+    else if(((Proj02Runner)o).data < data){
+      return 1;
+    }
+    else if(((Proj02Runner)o).data > data){
+      return -1;
+    }
+    else {return 0;}
   }
 
 }//end class Proj02Runner

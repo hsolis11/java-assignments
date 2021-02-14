@@ -1,5 +1,2 @@
-!.gitignore
-!*.java
-!*.htm
-!*/*.java
-!*/*.htm
+*.class
+*.htm
