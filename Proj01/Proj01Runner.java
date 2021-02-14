@@ -4,7 +4,6 @@ public class Proj01Runner {
 
     Collection inVals = new ArrayList();
 
-
     public Proj01Runner(int[] intList) {
         for(int i = 0; i < intList.length; i++) {
             inVals.add(intList[i]);
