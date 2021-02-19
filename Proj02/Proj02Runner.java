@@ -1,7 +1,3 @@
-/* File Proj02Runner
-This skeleton code will compile but it won't run
-because there is some missing code.
-*****************************************************/
 import java.util.TreeSet;
 import java.util.ArrayList;
 import java.util.Collection;
