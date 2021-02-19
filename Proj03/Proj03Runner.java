@@ -10,38 +10,45 @@ public class Proj03Runner implements Comparator, Serializable{
                             "and is not the work of others. I agree not\n" +
                             "to share my solution with others.\n" +
                             "Hector Solis\n");
-        data = "dummy";
     }//end no arg constructor
 
     Proj03Runner(String data){
         this.data = data;
     }
 
+    public String toString(){
+        return "" + data;
+    }
+
     public int compare(Object o1, Object o2){
-        if(!(o1 instanceof Proj03Runner)){
+        if(!(o1 instanceof String)){
             throw new ClassCastException();
         }
-        if(!(o2 instanceof Proj03Runner)){
+        if(!(o2 instanceof String)){
             throw new ClassCastException();
         }
-        if(((Proj03Runner)o1).data < ((Proj03Runner)o2).data){
-            return -1;
-        }
-        if(((Proj03Runner)o1).data > ((Proj03Runner)o2).data){
-            return 1;
-        }
-        else {
-            return 0;
-        }
-        // if(!(o1 instanceof String)){
-        //     throw new ClassCastException();
+
+
+        // if(((Proj03Runner)o1).data < ((Proj03Runner)o2).data){
+        //     return -1;
         // }
-        // if(!(o2 instanceof String)){
-        //     throw new ClassCastException();
+        // if(((Proj03Runner)o1).data > ((Proj03Runner)o2).data){
+        //     return 1;
+        // }
+        // else {
+        //     return 0;
         // }
 
-        // int result = ((String)o1).toUpperCase().compareTo(((String)o2).toUpperCase());
-        // return result*(-1);
+
+        if(!(o1 instanceof String)){
+            throw new ClassCastException();
+        }
+        if(!(o2 instanceof String)){
+            throw new ClassCastException();
+        }
+
+        int result = ((String)o1).toUpperCase().compareTo(((String)o2).toUpperCase());
+        return result*(-1);
     }
 
     public boolean equals(Object o){
