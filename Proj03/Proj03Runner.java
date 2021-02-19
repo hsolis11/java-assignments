@@ -28,18 +28,6 @@ public class Proj03Runner implements Comparator, Serializable{
             throw new ClassCastException();
         }
 
-
-        // if(((Proj03Runner)o1).data < ((Proj03Runner)o2).data){
-        //     return -1;
-        // }
-        // if(((Proj03Runner)o1).data > ((Proj03Runner)o2).data){
-        //     return 1;
-        // }
-        // else {
-        //     return 0;
-        // }
-
-
         if(!(o1 instanceof String)){
             throw new ClassCastException();
         }
