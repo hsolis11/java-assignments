@@ -3,38 +3,37 @@ import java.io.Serializable;
 
 class Proj04Runner {
 
-    Collection vector = new TreeSet(new TheComparator());
+    Collection treeset = new TreeSet(new TheComparator());
 
     Proj04Runner(){
         System.out.println("I certify that this program is my own work\n" +
                             "and is not the work of others. I agree not\n" +
                             "to share my solution with others.\n" +
                             "Hector Solis\n");
-    }
+    }//end constructor
 
     public Object[] runA(Object[] ref){
-        // process the data
+        // insert data into treeset
         for(int i = 0; i < ref.length; i++){
-            vector.add(ref[i]);
+            treeset.add(ref[i]);
         }
         
-        Object[] array = vector.toArray(); // from collection to object
-        Arrays.sort(array, new TheComparator()); // sorting in custom order
+        Object[] array = treeset.toArray();
+        Arrays.sort(array, new TheComparator());
 
         return array;
 
-    }
+    }// end runA
 
     public Collection runB(){
 
-        Collection arraylist = new ArrayList(vector);
+        Collection arraylist = new ArrayList(treeset);
         Comparator aComparator = Collections.reverseOrder();
         Collections.sort((List)arraylist, aComparator);
 
         return arraylist;
-
-    }
-}
+    }// end runB
+}//end Proj04Runner class
 
 class TheComparator implements Comparator, Serializable{
 
@@ -48,5 +47,5 @@ class TheComparator implements Comparator, Serializable{
 
         int result = ((String)o1).toUpperCase().compareTo(((String)o2).toUpperCase());
         return result;
-    }
-}
+    }//end compare
+}//end TheComparator class
